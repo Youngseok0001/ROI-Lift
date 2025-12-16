@@ -1,0 +1,38 @@
+# @package _global_
+
+defaults:  
+  - scheduler : "LinearWarmupCosineAnnealingLRSch" 
+  - optimizer : AdamW  
+  
+# dataset args  
+embed_dataset:
+  base_data_path: "/home/yjeon31/CODE/active/MammoTomo/data/processed/embed/"    
+duke_dataset:
+  base_data_path: "/home/yjeon31/CODE/active/MammoTomo/data/processed/duke/"
+
+transform_train_args:
+  patch_size: [128,128]
+  full_shape: [1520, 912]
+  max_depth: 64
+
+transform_valid_args:
+  patch_size: [128,128]
+  full_shape: [1520, 912]
+  max_depth: -1
+
+
+# training args
+batch_size: 12
+num_workers: 16
+epoch: 300
+train_iteration_per_epoch: null #400
+val_iteration_per_epoch: null # 100
+precision: "32"  # full precision (32, '32' or '32-true'), 16bit mixed precision (16, '16', '16-mixed'), (bf16-mixed)
+seed_number: -1  # if -1 do not set seed
+check_val_every_n_epoch: 1 # s
+num_gpu : 1
+
+# path args
+log_base_path: "log" 
+ckpt_base_path: "ckpt" 
+test_only: false

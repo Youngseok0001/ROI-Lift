@@ -1,0 +1,22 @@
+# @package _global_
+experiment_name: roi-lift-no-tv
+
+defaults:
+  - /base
+
+model:
+  name: RoiLift
+  num_slice: 64
+  input_shape: [128, 128]
+  backbone_name: "MammoClip"
+  mammo_clip_ckpt_path: "roi_lift/ckpt/b2-model-best-epoch-10.tar"
+  tau: 0.666
+  min_tau: 0.666
+  tv_weight: 0.0
+  entropy_weight: 0.005
+  severity_weight: 1.0
+  subtype_weight: 1.0
+  similarity_weight: 0.01
+
+metric:  
+  dist_mode: "standard"
