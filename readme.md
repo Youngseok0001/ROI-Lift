@@ -27,7 +27,7 @@
 ### Motivation
 
 <p align="center">
-    <img src="assets/fig/motivation.png" width="300"/>
+    <img src="assets/fig/motivation.png" width="600"/>
 </p>
 
 <p align="center">
