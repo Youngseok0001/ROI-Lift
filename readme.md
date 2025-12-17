@@ -30,7 +30,7 @@
     <img src="assets/fig/motivation.png" width="600"/>
 </p>
 
-<p align="center">
+<p align="center" style="font-size: 20px;">
     <sub><b>Figure 1.</b> Can AI learn where a lesion lies in depth? FFDM supports rapid localization of suspicious regions (red box) but often obscures lesion boundaries due to overlapping tissue. DBT mitigates this by providing a pseudo‑3D, slice‑by‑slice view at the cost of nearly doubling reading time. ROI‑Lift aims to automatically identify the valid depth region where the lesion lies, reducing the need for manual DBT navigation.</sub>
 </p>
 
@@ -39,7 +39,7 @@
     <img src="assets/fig/overview.png"/>
 </p>
 
-<p align="center">
+<p align="center" style="font-size: 20px;">
   <sub>
     <b>Figure 2.</b> <b>Overview of ROI-Lift.</b>
     ROI-Lift aims to localize the lesion-containing depth region <b>z⁺<sub>loc</sub></b>
@@ -62,7 +62,7 @@
     <img src="assets/fig/result_1.png"/>
 </p>
 
-<p align="center">
+<p align="center" style="font-size: 20px;">
   <sub>
     <b>Figure 3.</b>
     <b>Center Slice Difference (CD) performance comparison on the internal (EMBED) and external (BCS_DBT) datasets.</b>
@@ -77,7 +77,7 @@
     <img src="assets/fig/result_2.png"/>
 </p>
 
-<p align="center">
+<p align="center" style="font-size: 20px;">
   <sub>
     <b>Figure 4.</b>
     <b>Qualitative comparison of ROI-Lift and baseline methods.</b>
@@ -113,7 +113,7 @@ We pretrained our model with [Emory Breast Imaging Dataset (EMBED)](https://gith
 
 The dataset requires application to access, which can be done by filling out this [form](https://forms.gle/HwGMM6vdv3w32TKF9).
 
-Download the EMBED dataset at [here](https://aws.amazon.com/marketplace/pp/prodview-unw4li5rkivs2#resources)
+Download the EMBED dataset [here](https://aws.amazon.com/marketplace/pp/prodview-unw4li5rkivs2#resources).
 
 We strongly encourage users to refer to the [offical EMBED data documentation](https://docs.hitilab.com/en/datasets/embed), if your goal is to reproduce the work or conduct related research.
 
@@ -121,7 +121,7 @@ We strongly encourage users to refer to the [offical EMBED data documentation](h
 External evaluation is done with DCS_DBT from DUKE University. The original train–validation–test splits were combined into a single external validation set comprising 435 DBT images, each with
 center-slice-labelled ROIs. Unlike EMBED, BCS_DBT lacks FFDM.
 
-Download the EMBED dataset at [here](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=64685580).
+Download the BCS_DBT dataset [here](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=64685580).
 
 ## Pre-processing
 If your goal is only to evaluate ROI-Lift, you can skip EMBED processing.
@@ -192,7 +192,7 @@ You can skip this section if you only want infernece.
 ROI-Lift has a perceptual loss where the embedding is extracted using Mammo-CLIP. Please download Mammo-CLIP ckpt from [here](https://huggingface.co/shawn24/Mammo-CLIP/blob/main/Pre-trained-checkpoints/b2-model-best-epoch-10.tar) and move it to `roi_lift/ckpt/`.
 
 ### Training
-Run the command in `train.sh` at the main project directory
+Run the command in `train.sh`.
 ```bash
 CUDA_VISIBLE_DEVICES=[your/gpu_id] \
 PYTHONPATH=$PYTHONPATH:[your/project/dir] \
