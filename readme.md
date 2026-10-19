@@ -1,4 +1,4 @@
-# <div align="center"> ROI-Lift:<br>Learning to Lift the 2D Mammogram ROI to 3D Tomosynthesis ROI without 3D Annotations </div>
+# <div align="center"> [WACV 2027] <br> ROI-Lift: Learning to Lift the 2D Mammogram ROI to 3D Tomosynthesis ROI without 3D Annotations </div>
 
 [Young Seok Jeon <sup>1</sup>](https://scholar.google.com/citations?user=ppl10bsAAAAJ&hl=en),
 Beatrice Brown-Mulry <sup>1</sup>,
