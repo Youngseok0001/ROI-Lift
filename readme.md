@@ -1,26 +1,24 @@
 # <div align="center"> ROI-Lift:<br>Learning to Lift the 2D Mammogram ROI to 3D Tomosynthesis ROI without 3D Annotations </div>
 
-[xxx](xxxx)
-, [xxx](xxx)
-, [xxx](xxx),
-[xxx](xxx)
+[Young Seok Jeon <sup>1</sup>](https://scholar.google.com/citations?user=ppl10bsAAAAJ&hl=en),
+Beatrice Brown-Mulry <sup>1</sup>,
+Rohan Isaac <sup>1</sup>,
+Frank Li <sup>1</sup>,
+Christian Fauria-Robinson <sup>1</sup>,
+Hao Du <sup>2</sup>,
+Theo Dapamede <sup>1</sup>, 
+Mohammadreza Chavoshi <sup>1</sup>,
+Aawez Mansuri <sup>1</sup>,
+Chiratidzo Sanyika <sup>1</sup>,
+Judy Gichoya <sup>1</sup>,
+Hari Trivedi <sup>1</sup>,
 <br/>
-<sup>1</sup>xxx, <sup>2</sup> xxx
----
+<br/>
+<sup>1</sup> Department of Radiology, Emory University, Atlanta, GA, USA
+<br/>
+<sup>2</sup> Beijing University of Aeronautics and Astronautics, Beijing, China 
 
-## Table of Contents
-1. [Model Overview](#model-overview)
-2. [Quick Run with Hugginface](#quick-run-with-huggingface)
-3. [Environment Setup](#environment-setup)
-4. [ROI-Lift checkpoints](#roi-lift-checkpoints)
-5. [ROI-Lift inference](#roi-lift-inference)
-6. [Data Download](#data-download)
-7. [Pre-processing](#pre-processing)
-8. [Traning ROI-Lift](#training-roi-lift)
-8. [Inference with ROI-Lift](#Inference-with-roi-lift)
-9. [Citation](#citation)
-10. [License and Copyright](#license-and-copyright)
-11. [Contact](#contact)
+---
 
 ## Model Overview
 
@@ -31,7 +29,7 @@
 </p>
 
 <p align="center" style="font-size: 20px;">
-    <sub><b>Figure 1.</b> Can AI learn where a lesion lies in depth? FFDM supports rapid localization of suspicious regions (red box) but often obscures lesion boundaries due to overlapping tissue. DBT mitigates this by providing a pseudo‑3D, slice‑by‑slice view at the cost of nearly doubling reading time. ROI‑Lift aims to automatically identify the valid depth region where the lesion lies, reducing the need for manual DBT navigation.</sub>
+    <sub><b>Figure 1.</b> Can AI learn where the lesion lies in depth? Although FFDM allows quick localization of suspicious areas (red box), it often suffers from obscured lesion boundaries caused by overlapping tissue artifacts. DBT addresses this limitation by providing a pseudo-3D view that allows slice-by-slice assessment, but at the cost of nearly doubling reading time. This raises the question: "can we train a model to automatically identify the valid depth region where the lesion lies?"</sub>
 </p>
 
 ### Method
@@ -212,7 +210,7 @@ We provide a Jupyter Notebook which runs ROI-Lift on one of BCS_DBT data. The sa
 
 ## Citation
 ```
-xxx
+TBU
 ```
 
 ## License and Copyright
@@ -225,11 +223,11 @@ Indicate if changes were made.
 Distribute any derivative works under the same license (CC BY-NC-SA 4.0).
 Commercial use, including model deployment, integration into for-profit products or services, or sale of derivatives, is strictly prohibited.
 
-Copyright © [xxx Lab](xxx), 2025
+Copyright © [HITI Lab](https://data.hitilab.com/), 2025
 License text: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Contact
-For any queries, contact xxx (email: xxx)
+For any queries, contact me (Young Seok **Jeon**) (email: youngseokjeon74@gmail.com)
 
 
 
