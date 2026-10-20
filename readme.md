@@ -204,6 +204,8 @@ python roi_lift/train.py \
 
 dowload the ROI-Lift checkpoint [here](https://drive.google.com/file/d/10ZS0p7Snou8EgR_GuQIm8XAuYYRW59IK/view?usp=drive_link). and move it to `roi_lift/ckpt`
 
+The Mammo-CLIP checkpoint is **not** required for inference. Its weights are only used to initialize the model for training and are overwritten by the ROI-Lift checkpoint, so set `cfg.model.mammo_clip_ckpt_path = None` when loading (see `example.ipynb`).
+
 ### Inference
 We provide a Jupyter Notebook which runs ROI-Lift on one of BCS_DBT data. The sample data is in `assets/sample`.
 

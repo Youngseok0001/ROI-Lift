@@ -1,6 +1,6 @@
 import os
 import copy
-from typing import Sequence
+from typing import Optional, Sequence
 
 from toolz import *
 from toolz.curried import *
@@ -53,7 +53,7 @@ class RoiLift(nn.Module):
     def __init__(
         self,
         input_shape: Sequence[int] = [128, 128],
-        mammo_clip_ckpt_path: str = f"{file_dir}/../../ckpt/b2-model-best-epoch-10.tar",
+        mammo_clip_ckpt_path: Optional[str] = f"{file_dir}/../ckpt/b2-model-best-epoch-10.tar",
         tau: float = 0.666,
         min_tau: float = 0.666,
         tv_weight: float = 0.01,

@@ -1,4 +1,5 @@
 import os
+from typing import Optional
 
 from toolz import *
 from toolz.curried import *
@@ -20,16 +21,20 @@ class MammoClip(nn.Module):
 
     def __init__(
         self,
-        ckpt_path: str = f"{file_dir}/../../ckpt/b2-model-best-epoch-10.tar",
+        ckpt_path: Optional[str] = f"{file_dir}/../../ckpt/b2-model-best-epoch-10.tar",
         *args,
         **kwargs,
     ):
         super().__init__(*args, **kwargs)
 
-        self.backbone = EfficientNet.from_pretrained(model_name="efficientnet-b2", num_classes=1)
         self.embedding_dim = 1408
 
-        self.load_weight(os.path.abspath(ckpt_path))
+        # ckpt_path=None skips Mammo-CLIP init (e.g., inference, where the ROI-Lift ckpt overwrites every weight)
+        if ckpt_path is None:
+            self.backbone = EfficientNet.from_name("efficientnet-b2", num_classes=1)
+        else:
+            self.backbone = EfficientNet.from_pretrained(model_name="efficientnet-b2", num_classes=1)
+            self.load_weight(os.path.abspath(ckpt_path))
 
     def forward(self, x):
         x = self.backbone.extract_features(x)
